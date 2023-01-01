@@ -33,6 +33,10 @@ const IPRange = lazy(() => import('./Admin/IPRange'));
 
 const APIAccess = lazy(() => import('./Admin/APIAccess'));
 
+const Licenses = lazy(() => import('./Admin/Licenses'));
+
+const LicenseActivationForm = lazy(() => import('./Admin/LicenseActivationForm'));
+
 const Authentication = lazy(() => import('./Admin/Authentication'));
 
 const SingleSignOn = lazy(() => import('./Admin/SingleSignOn'));
@@ -65,6 +69,8 @@ class AppRoutes extends Component {
           <Route exact path="/admin/iprange" component={ IPRange } />
           <Route exact path="/admin/apiaccess" component={ APIAccess } />
           <Route exact path="/admin/suppliers" component={ Suppliers } />
+          <Route exact path="/admin/licenses" component={ Licenses } />
+          <Route exact path="/admin/licenseform" component={ LicenseActivationForm } />
           <Route exact path="/admin/supplier/details" component={ SupplierDetails } />
           <Route exact path="/admin/supplierform" component={ SupplierForm } />
           <Route exact path="/admin/auth" component={ Authentication } />

@@ -40,6 +40,10 @@ function Admin(props) {
             <p className="text-black">Information relating to your Suppliers</p>
             <span><Link className="font-weight-medium d-block mb-4" to="/admin/suppliers">Edit</Link></span>
 
+            <span className="card-title mt-3" style={{color:'#629C44'}}>License</span>
+            <p className="text-black">Licensed features and expiration</p>
+            <span><Link className="font-weight-medium d-block mb-4" to="/admin/licenses">Edit</Link></span>
+
             <span className="card-title mt-3" style={{color:'#629C44'}}>Delete Organization</span>
             <p className="text-black">You can delete this organization only if it has no users, active licenses, or open events</p>
             <span><a className="cursor-pointer text-primary">Proceed</a></span>
