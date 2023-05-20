@@ -20,6 +20,9 @@ const LoggedIn = () => getUser() !== null;
 const setUser = (user) => sessionStorage.setItem("kotage_user", JSON.stringify(user));
 const getUser = () => JSON.parse(sessionStorage.getItem("kotage_user"));
 
+const setCookie = (name, value) => sessionStorage.setItem(name, value);
+const getCookie = (name) => sessionStorage.getItem(name);
+
 const IsAuthenticated = () => LoggedIn();
 
 
@@ -32,6 +35,8 @@ Config.SessionTimeout = SessionTimeout;
 Config.LoggedIn = LoggedIn;
 Config.setUser = setUser;
 Config.getUser = getUser;
+Config.getCookie = getCookie;
+Config.setCookie = setCookie;
 Config.IsAuthenticated = IsAuthenticated;
 
 
@@ -43,5 +48,7 @@ export {
     LoggedIn,
     setUser,
     getUser,
+    setCookie,
+    getCookie,
     IsAuthenticated
 };
