@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/sourcing_app/static/css/main.96e5917b.css",
-    "main.js": "/sourcing_app/static/js/main.b88d6d05.js",
+    "main.js": "/sourcing_app/static/js/main.ed3bdd30.js",
     "static/css/1014.1c7d44f3.chunk.css": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css",
-    "static/js/1014.261a7bc9.chunk.js": "/sourcing_app/static/js/1014.261a7bc9.chunk.js",
+    "static/js/1014.12e4cf3b.chunk.js": "/sourcing_app/static/js/1014.12e4cf3b.chunk.js",
     "static/js/3024.ced80702.chunk.js": "/sourcing_app/static/js/3024.ced80702.chunk.js",
     "static/js/1385.9b3e84a4.chunk.js": "/sourcing_app/static/js/1385.9b3e84a4.chunk.js",
     "static/js/5576.21bea14d.chunk.js": "/sourcing_app/static/js/5576.21bea14d.chunk.js",
@@ -72,9 +72,9 @@
     "static/media/6.jpg": "/sourcing_app/static/media/6.edefb235566ed72a7429.jpg",
     "index.html": "/sourcing_app/index.html",
     "main.96e5917b.css.map": "/sourcing_app/static/css/main.96e5917b.css.map",
-    "main.b88d6d05.js.map": "/sourcing_app/static/js/main.b88d6d05.js.map",
+    "main.ed3bdd30.js.map": "/sourcing_app/static/js/main.ed3bdd30.js.map",
     "1014.1c7d44f3.chunk.css.map": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css.map",
-    "1014.261a7bc9.chunk.js.map": "/sourcing_app/static/js/1014.261a7bc9.chunk.js.map",
+    "1014.12e4cf3b.chunk.js.map": "/sourcing_app/static/js/1014.12e4cf3b.chunk.js.map",
     "3024.ced80702.chunk.js.map": "/sourcing_app/static/js/3024.ced80702.chunk.js.map",
     "1385.9b3e84a4.chunk.js.map": "/sourcing_app/static/js/1385.9b3e84a4.chunk.js.map",
     "5576.21bea14d.chunk.js.map": "/sourcing_app/static/js/5576.21bea14d.chunk.js.map",
@@ -135,6 +135,6 @@
   },
   "entrypoints": [
     "static/css/main.96e5917b.css",
-    "static/js/main.b88d6d05.js"
+    "static/js/main.ed3bdd30.js"
   ]
 }
