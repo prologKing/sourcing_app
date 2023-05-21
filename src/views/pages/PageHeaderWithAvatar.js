@@ -3,11 +3,11 @@ import { CContainer, CHeader } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { logoNegative } from 'src/assets/brand/logo-negative'
 import { CAvatar } from '@coreui/react'
-import avatar1 from 'src/assets/images/avatars/1.jpg'
+import avatar1 from 'src/assets/images/avatars/new_avatar.jpg'
 /* eslint-disable */
 const PageHeaderWithAvatar = () => {
   return (
-    <CHeader position="sticky" style={{backgroundColor:'black', marginBottom: '200px'}}>
+    <CHeader position="sticky" style={{backgroundColor:'black'}}>
       <CContainer fluid>
       <div className="float-left" to="/">
         <CIcon className="sidebar-brand-full" icon={logoNegative} height={40} />

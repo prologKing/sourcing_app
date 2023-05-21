@@ -18,6 +18,8 @@ const LoginStep3 = React.lazy(() => import('./views/pages/login/LoginStep3'))
 const PasswordRecovery = React.lazy(() => import('./views/pages/login/PasswordRecovery'))
 const PasswordReset = React.lazy(() => import('./views/pages/login/PasswordReset'))
 const TimeOut = React.lazy(() => import('./views/pages/sessiontimeout/TimeOut'))
+const Welcome = React.lazy(() => import('./views/pages/Welcome'))
+const CompanySetup = React.lazy(() => import('./views/pages/register/CompanySetup'))
 const Register = React.lazy(() => import('./views/pages/register/Register'))
 const Activate = React.lazy(() => import('./views/pages/register/Activate'))
 const Page404 = React.lazy(() => import('./views/pages/page404/Page404'))
@@ -35,6 +37,8 @@ class App extends Component {
             <Route exact path="/passrecovery" name="Login Page" element={<PasswordRecovery />} />
             <Route exact path="/passreset" name="Login Page" element={<PasswordReset />} />
             <Route exact path="/session-timeout" name="Session Timeout" element={<TimeOut />} />
+            <Route exact path="/welcome" name="Welcome Page" element={<Welcome />} />
+            <Route exact path="/companysetup" name="Setup Page" element={<CompanySetup />} />
             <Route exact path="/register" name="Register Page" element={<Register />} />
             <Route exact path="/activate" name="Activation Page" element={<Activate />} />
             <Route exact path="/404" name="Page 404" element={<Page404 />} />

@@ -1,13 +1,16 @@
 /* eslint-disable */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CContainer } from '@coreui/react'
-import {setCookie} from '../../../components/Config';
+import {setCookie, setUser} from '../../../components/Config';
 import { CButton, CCol, CForm, CFormInput, CInputGroup, CRow } from '@coreui/react'
 import PageHeaderWithoutAvatar from '../PageHeaderWithoutAvatar'
 
 const Login = () => {
   const [email, setEmail] = useState('');
 
+  useEffect(() =>{
+    setUser(null)
+  })
   const handleChange = (e) => {
     e.preventDefault();
 

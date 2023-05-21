@@ -1,6 +1,6 @@
 import React from 'react'
 import { IsAuthenticated } from "../components/Config";
-import { AppContent, AppFooter, AppHeader } from '../components/index'
+import { AppContent, AppFooter, AppHeader, AppSidebar } from '../components/index'
 import Login from 'src/views/pages/login/Login';
 
 const DefaultLayout = () => {
