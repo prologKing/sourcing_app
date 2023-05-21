@@ -38,18 +38,18 @@ const LoginStep2 = () => {
                                 />
                             </CInputGroup>
                             <div className="mb-5">
-                                <CButton href="/#/passrecovery" color="light" shape="rounded-pill" className="ms-auto">
+                                <CButton href="/sourcing_app/#/passrecovery" color="light" shape="rounded-pill" className="ms-auto">
                                     I forgot my password
                                 </CButton>
                             </div>
                             <div className="d-flex w-100 justify-content-between">
                                 <div>
-                                    <CButton href="/#/login" color="light" shape="rounded-pill">
+                                    <CButton href="/sourcing_app/#/login" color="light" shape="rounded-pill">
                                         <CIcon width={24} icon={cilArrowLeft} size="xl" />
                                     </CButton>
                                 </div>
                                 <div className="justify-content-md-end">
-                                    <CButton href="/#/codeverify" color="dark" shape="rounded-pill" style={{ backgroundColor: 'black' }}>
+                                    <CButton href="/sourcing_app/#/codeverify" color="dark" shape="rounded-pill" style={{ backgroundColor: 'black' }}>
                                         Next&nbsp;&nbsp;<CIcon width={15} icon={cilArrowRight} size="xl" />
                                     </CButton>
                                 </div>

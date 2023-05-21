@@ -44,7 +44,7 @@ const LoginStep3 = () => {
                             </div>
                             <div className="d-flex w-100 justify-content-between">
                                 <div>
-                                    <CButton href="/#/verify" color="light" shape="rounded-pill">
+                                    <CButton href="/sourcing_app/#/verify" color="light" shape="rounded-pill">
                                         <CIcon width={24} icon={cilArrowLeft} size="xl" />
                                     </CButton>
                                 </div>

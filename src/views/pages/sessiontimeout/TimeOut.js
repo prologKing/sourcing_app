@@ -16,7 +16,7 @@ const TimeOut = () => {
                   <p className="text-medium-emphasis mb-2">To continue using the site, enter your login information.</p>
                   
                   <div className="col-5">
-                    <CButton href="/#/login" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
+                    <CButton href="/sourcing_app/#/login" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
                   </div>
                   
                 </CForm>

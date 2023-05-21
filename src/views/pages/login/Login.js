@@ -30,9 +30,9 @@ const Login = () => {
                   </CInputGroup>
                   
                   <div className="d-grid mb-3">
-                    <CButton href="/#/verify" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
+                    <CButton href="/sourcing_app/#/verify" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
                   </div>
-                  <p className="text-medium-emphasis text-center mb-5">Don't have an account? <a href="/#/register">Sign up</a></p>
+                  <p className="text-medium-emphasis text-center mb-5">Don't have an account? <a href="/sourcing_app/#/register">Sign up</a></p>
                 </CForm>
           </CCol>
         </CRow>

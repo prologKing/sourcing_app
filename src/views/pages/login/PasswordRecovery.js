@@ -18,9 +18,9 @@ const PasswordRecovery = () => {
                     <CFormInput placeholder="Email address here" size="lg" autoComplete="email" />
                   </CInputGroup>
                   <div className="d-grid mb-3">
-                    <CButton href="/#/passreset" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
+                    <CButton href="/sourcing_app/#/passreset" color="dark" size="lg" style={{backgroundColor: 'black'}}>Continue</CButton>
                   </div>
-                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/#/login">Sign in</a></p>
+                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/sourcing_app/#/login">Sign in</a></p>
                 </CForm>
           </CCol>
         </CRow>

@@ -14,10 +14,10 @@ const Register = () => {
                   <h4>Tell me about yourself.</h4>
                   <br />
                   <CInputGroup className="mb-3">
-                    <CFormInput placeholder="First lame" size="lg" autoComplete="firstname" />
+                    <CFormInput placeholder="First name" size="lg" autoComplete="firstname" />
                   </CInputGroup>
                   <CInputGroup className="mb-3">
-                    <CFormInput placeholder="Last lame" size="lg" autoComplete="lastname" />
+                    <CFormInput placeholder="Last name" size="lg" autoComplete="lastname" />
                   </CInputGroup>
                   <CInputGroup className="mb-3">
                     <CFormInput placeholder="Email" size="lg" autoComplete="email" />
@@ -31,9 +31,9 @@ const Register = () => {
                     />
                   </CInputGroup>
                   <div className="d-grid mb-3">
-                    <CButton href="/#/activate" color="dark" size="lg" style={{backgroundColor: 'black'}}>Get Started</CButton>
+                    <CButton href="/sourcing_app/#/activate" color="dark" size="lg" style={{backgroundColor: 'black'}}>Get Started</CButton>
                   </div>
-                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/#/login">Sign in</a></p>
+                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/sourcing_app/#/login">Sign in</a></p>
                 </CForm>
           </CCol>
         </CRow>

@@ -34,7 +34,7 @@ const PasswordReset = () => {
                     <CFormInput placeholder="Reset code" size="lg" autoComplete="reset" />
                   </CInputGroup>
                   <div className="d-grid mb-3">
-                    <CButton href="/#/activate" color="dark" size="lg" style={{backgroundColor: 'black'}}>Proceed</CButton>
+                    <CButton href="/sourcing_app/#/activate" color="dark" size="lg" style={{backgroundColor: 'black'}}>Proceed</CButton>
                   </div>
                 </CForm>
           </CCol>
