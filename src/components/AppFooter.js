@@ -3,7 +3,7 @@ import { CFooter } from '@coreui/react'
 
 const AppFooter = () => {
   return (
-    <CFooter>
+    <CFooter className="justify-content-center">
       <div>
         <a href="/sourcing_app/#/home" rel="noopener noreferrer">
           Kotage
