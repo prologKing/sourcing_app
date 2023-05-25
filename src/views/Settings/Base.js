@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { CCard, CCardBody, CRow, CCol, CCardHeader } from '@coreui/react'
-import Source from 'src/views/Source/Source'
+import Users from './Users'
+import Security from './Security'
+import Account from './Account'
+import License from './License'
+import Suppliers from './Suppliers'
 
-const Typography = () => {
+const Base = () => {
   const [isActive, setActiveKey] = useState(1)
   return (
     <>
@@ -33,11 +37,11 @@ const Typography = () => {
                   </li>
                 </ul>
                 <div className="d-grid mb-3 tab-content" id="myTabContent">
-                  <div className={isActive == 1 ? "tab-pane fade show active" : "tab-pane fade"} id="users" role="tabpanel" aria-labelledby="nav-users-tab"><Source /></div>
-                  <div className={isActive == 2 ? "tab-pane fade show active" : "tab-pane fade"} id="security" role="tabpanel" aria-labelledby="nav-security-tab">a</div>
-                  <div className={isActive == 3 ? "tab-pane fade show active" : "tab-pane fade"} id="account" role="tabpanel" aria-labelledby="nav-account-tab">b</div>
-                  <div className={isActive == 4 ? "tab-pane fade show active" : "tab-pane fade"} id="license" role="tabpanel" aria-labelledby="nav-license-tab">b</div>
-                  <div className={isActive == 5 ? "tab-pane fade show active" : "tab-pane fade"} id="suppliers" role="tabpanel" aria-labelledby="nav-suppliers-tab">b</div>
+                  <div className={isActive == 1 ? "tab-pane fade show active" : "tab-pane fade"} id="users" role="tabpanel" aria-labelledby="nav-users-tab"><Users /></div>
+                  <div className={isActive == 2 ? "tab-pane fade show active" : "tab-pane fade"} id="security" role="tabpanel" aria-labelledby="nav-security-tab"><Security /></div>
+                  <div className={isActive == 3 ? "tab-pane fade show active" : "tab-pane fade"} id="account" role="tabpanel" aria-labelledby="nav-account-tab"><Account /></div>
+                  <div className={isActive == 4 ? "tab-pane fade show active" : "tab-pane fade"} id="license" role="tabpanel" aria-labelledby="nav-license-tab"><License /></div>
+                  <div className={isActive == 5 ? "tab-pane fade show active" : "tab-pane fade"} id="suppliers" role="tabpanel" aria-labelledby="nav-suppliers-tab"><Suppliers /></div>
                 </div>
               </div>
             </CCardBody>
@@ -48,4 +52,4 @@ const Typography = () => {
   )
 }
 
-export default Typography
+export default Base
