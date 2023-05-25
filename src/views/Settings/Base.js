@@ -15,7 +15,7 @@ const Base = () => {
         <CCol xs={12}>
           <CCard className="mb-4 mr-2">
             <CCardHeader>
-              <h4>Procure</h4>
+              <h4>Settings</h4>
             </CCardHeader>
             <CCardBody style={{ overflow: 'auto', width: '100%' }}>
               <div className="small text-medium-emphasis">

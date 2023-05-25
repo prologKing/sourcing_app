@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faCartShopping, faTruck, faSackDollar, faChartColumn, faSignOut } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faCartShopping, faTruck, faSackDollar, faChartColumn, faSignOut, faGears, faGear } from '@fortawesome/free-solid-svg-icons'
 
 import { CNavItem } from '@coreui/react'
 
@@ -34,6 +34,12 @@ const _nav = [
     name: 'Insights',
     to: '/insights',
     icon: <FontAwesomeIcon icon={faChartColumn} size="lg" customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Settings',
+    to: '/settings',
+    icon: <FontAwesomeIcon icon={faGear} size="lg" customClassName="nav-icon" />,
   },
   {
     component: CNavItem,

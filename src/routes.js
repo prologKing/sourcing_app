@@ -57,6 +57,7 @@ const routes = [
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/source', name: 'source', element: Source },
   { path: '/procure', name: 'Procure', element: Base },
+  { path: '/settings', name: 'Procure', element: Base },
   { path: '/base', name: 'Base', element: Cards, exact: true },
   { path: '/base/accordion', name: 'Accordion', element: Accordion },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },
