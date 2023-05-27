@@ -5,13 +5,6 @@ import {
   CBadge,
   CButton,
   CButtonGroup,
-  CCollapse,
-  CCardHeader,
-  CDropdown,
-  CDropdownDivider,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
   CCol,
   CRow,
 } from '@coreui/react'
@@ -20,13 +13,14 @@ import {
 } from '@coreui/react-pro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
-
+import {setCookie} from '../../components/Config';
 
 const Users = () => {
   const [details, setDetails] = useState([])
   const columns = [
     {
-      key: 'name',
+      key: 'firstname',
+      label: 'Name',
       _style: { width: '20%' },
       //_props: { color: 'secondary', className: 'fw-semibold' },
     },
@@ -49,57 +43,57 @@ const Users = () => {
     },
   ]
   const usersData = [
-    { id: 0, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 24, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
-      id: 1, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      id: 1, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
       // _props: { color: 'primary', align: 'middle' },
     },
     {
-      id: 2, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
+      id: 2, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
       // _cellProps: { all: { className: 'fw-semibold' }, title: { color: 'info' } },
     },
-    { id: 3, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 3, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
     {
-      id: 4, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51'
+      id: 4, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51'
     },
-    { id: 5, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 6, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 5, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 6, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
       id: 7,
-      name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
       //_props: { color: 'warning', align: 'middle' },
     },
-    { id: 8, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 9, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 10, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 11, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 8, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 9, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 10, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 11, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
-      id: 12, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      id: 12, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
       //_selected: true 
     },
-    { id: 13, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 13, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
       id: 14,
-      name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
+      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
     },
-    { id: 15, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 16, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 17, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 15, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 16, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 17, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
       id: 18,
-      name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
     },
     {
       id: 19,
-      name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
     },
-    { id: 20, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 21, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 22, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 23, name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 20, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 21, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 22, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 23, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
     {
       id: 42,
-      name: 'Dorothy Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
     },
   ]
   const getBadge = (status) => {
@@ -116,6 +110,16 @@ const Users = () => {
         return 'primary'
     }
   }
+
+  const getFullName = (row) => {
+    return row.firstname + ' ' + row.lastname
+}
+
+  const GoToUserDetails = (row) => {
+    setCookie("userdetails", JSON.stringify(row));
+    window.location.assign("/sourcing_app/#/settings/userform");
+}
+
   const toggleDetails = (index) => {
     const position = details.indexOf(index)
     let newDetails = details.slice()
@@ -133,7 +137,7 @@ const Users = () => {
           <CCardBody style={{ overflow: 'auto', width: '100%' }}>
             <div>
               <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                <CButton color="dark"> <FontAwesomeIcon icon={faUserPlus} customClassName="nav-icon" /> Add</CButton>
+                <CButton style={{backgroundColor: 'black'}} onClick={() => GoToUserDetails({ id: 0, firstname: '', lastname: '', email: '', role: '', last_login: null })}> <FontAwesomeIcon icon={faUserPlus} customClassName="nav-icon" /> Add</CButton>
               </CButtonGroup>
 
               <CSmartTable
@@ -154,6 +158,11 @@ const Users = () => {
                       <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
                     </td>
                   ),
+                  firstname: (item) => (
+                    <td>
+                      {getFullName(item)}
+                    </td>
+                  ),
                   show_details: (item) => {
                     return (
                       <td className="py-2">
@@ -162,7 +171,7 @@ const Users = () => {
                         color="warning"
                         size="sm"
                         onClick={() => {
-                            toggleDetails(item.id)
+                            GoToUserDetails(item)
                         }}
                         >
                           <FontAwesomeIcon icon={faEdit} customClassName="nav-icon" />

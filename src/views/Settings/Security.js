@@ -25,7 +25,7 @@ const Security = () => {
                             <p><CFormCheck id="flexCheckDefault" label="Enable two-step verification for this organization" /></p>
                             <p>
                                 <CFormCheck id="flexCheckDefault" label="Enable single sign-on for this organization" />
-                                <CLink href="#" style={{ textDecorationLine: 'none', marginLeft: '20px' }}>SAML IdP Configuration</CLink>
+                                <CLink href="/sourcing_app/#/settings/samlconfig" style={{ textDecorationLine: 'none', marginLeft: '20px' }}>SAML IdP Configuration</CLink>
                             </p>
                         </div>
                         <div className="mt-5">

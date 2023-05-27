@@ -134,7 +134,7 @@ const License = () => {
             <div>
             <h6>Packages</h6>
             <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                <CButton color="dark"> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add</CButton>
+                <CButton style={{backgroundColor: 'black'}} href="/sourcing_app/#/settings/licenseform"> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add </CButton>
               </CButtonGroup>
             <p>Understand what licensing has been purchased for your organization.</p>
               <CSmartTable
@@ -158,25 +158,7 @@ const License = () => {
                   show_details: (item) => {
                     return (
                       <td className="py-2">
-                        <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                        <CButton 
-                        color="warning"
-                        size="sm"
-                        onClick={() => {
-                            toggleDetails(item.id)
-                        }}
-                        >
-                          <FontAwesomeIcon icon={faEdit} customClassName="nav-icon" />
-                        </CButton>
-                        <CButton 
-                        color="danger" 
-                        size="sm"
-                        onClick={() => {
-                            toggleDetails(item.id)
-                          }}>
-                         <FontAwesomeIcon icon={faTrash} customClassName="nav-icon" />
-                        </CButton>
-                         </CButtonGroup>
+                        
                       </td>
                     )
                   },

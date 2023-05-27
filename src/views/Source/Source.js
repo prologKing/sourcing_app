@@ -147,7 +147,7 @@ const Source = () => {
                     <CDropdownItem href="#">Separated link</CDropdownItem>
                   </CDropdownMenu>
                 </CDropdown>
-                <CButton color="dark"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /></CButton>
+                <CButton color="dark" href="/#/source/details"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /></CButton>
               </CButtonGroup>
 
               <CSmartTable
@@ -174,6 +174,7 @@ const Source = () => {
                         <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
                         <CButton 
                         color="warning"
+                        href="/#/source/details"
                         size="sm"
                         onClick={() => {
                             toggleDetails(item.id)

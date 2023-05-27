@@ -126,7 +126,7 @@ const Suppliers = () => {
           <CCardBody style={{ overflow: 'auto', width: '100%' }}>
             <div>
               <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                <CButton color="dark"> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add</CButton>
+                <CButton style={{backgroundColor: 'black'}}> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add</CButton>
               </CButtonGroup>
 
               <CSmartTable
