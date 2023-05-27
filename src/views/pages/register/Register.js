@@ -33,7 +33,7 @@ const Register = () => {
                   <div className="d-grid mb-3">
                     <CButton href="/sourcing_app/#/activate" color="dark" size="lg" style={{backgroundColor: 'black'}}>Get Started</CButton>
                   </div>
-                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/sourcing_app/#/login">Sign in</a></p>
+                  <p className="text-medium-emphasis text-center mb-5">Already have an account? <a href="/sourcing_app/#/login" style={{textDecorationLine: 'none'}}>Sign in</a></p>
                 </CForm>
           </CCol>
         </CRow>

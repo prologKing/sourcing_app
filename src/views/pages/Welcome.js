@@ -5,6 +5,8 @@ import {setUser} from '../../components/Config';
 import supplier from 'src/assets/images/avatars/supplier.png'
 import { CAccordion, CAccordionBody, CAccordionHeader, CAccordionItem, CLink, CCol, CForm, CRow } from '@coreui/react'
 import PageHeaderWithAvatar from './PageHeaderWithAvatar'
+import CIcon from '@coreui/icons-react'
+import { cilChevronRight } from '@coreui/icons';
 
 const Welcome = () => {
   return (
@@ -18,23 +20,21 @@ const Welcome = () => {
               <p className="text-medium-emphasis mb-2">Choose a portal below.</p>
               <CRow>
                 <CCol xs={12} sm={6} lg={6}>
-                  <CLink href="#" onClick={()=> setUser(true)} style={{ textDecorationLine: 'none' }}>
-                    <div className="rounded me-2 mb-4 p-2" style={{ color: 'black', backgroundColor: '#ebedef', wordWrap: 'normal' }}>
+                    <div className="rounded me-2 mb-4 pt-2 pb-5 px-5" style={{ color: 'black', backgroundColor: '#ebedef', wordWrap: 'normal' }}>
                       <img src={buyer} alt="buyer" className="float-end" width="45px" height="40px" />
                       <h6>Buy</h6>
                       <p style={{ wordWrap: 'normal' }}>Modules for sourcing, procurement, invoicing and supplier managment</p>
+                      <CLink href="#" className="float-end text-medium-emphasis" onClick={()=> setUser(true)} style={{ textDecorationLine: 'none' }}><CIcon width={24} icon={cilChevronRight} size="xl" /> </CLink>
                     </div>
-                  </CLink>
                 </CCol>
 
                 <CCol xs={12} sm={6} lg={6}>
-                  <CLink href="#" onClick={()=> setUser(true)} style={{ textDecorationLine: 'none', color: 'black' }}>
-                    <div className="rounded me-2 mb-4 p-2" style={{ color: 'black', backgroundColor: '#ebedef', wordWrap: 'normal' }}>
+                    <div className="rounded me-2 mb-4 pt-2 pb-5 px-5" style={{ color: 'black', backgroundColor: '#ebedef', wordWrap: 'normal' }}>
                       <img src={supplier} alt="supplier" className="float-end" width="50px" height="30px" />
                       <h6>Supplier</h6>
                       <p style={{ wordWrap: 'normal' }}>Collaborate with your customers on sourcing needs, orders, invoices.</p>
+                      <CLink href="#" className="float-end text-medium-emphasis" onClick={()=> setUser(true)} style={{ textDecorationLine: 'none' }}><CIcon width={24} icon={cilChevronRight} size="xl" /> </CLink>
                     </div>
-                  </CLink>
                 </CCol>
               </CRow>
               <div className="d-grid" style={{ marginTop: '100px', marginBottom: '200px' }}>
