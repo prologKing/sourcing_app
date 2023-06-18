@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/sourcing_app/static/css/main.5f5b7baa.css",
-    "main.js": "/sourcing_app/static/js/main.377e6fc6.js",
+    "main.js": "/sourcing_app/static/js/main.e3a18647.js",
     "static/css/1014.1c7d44f3.chunk.css": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css",
-    "static/js/1014.2fb67fad.chunk.js": "/sourcing_app/static/js/1014.2fb67fad.chunk.js",
+    "static/js/1014.02a93c16.chunk.js": "/sourcing_app/static/js/1014.02a93c16.chunk.js",
     "static/js/3024.642c7ac4.chunk.js": "/sourcing_app/static/js/3024.642c7ac4.chunk.js",
     "static/js/1385.38bb18c3.chunk.js": "/sourcing_app/static/js/1385.38bb18c3.chunk.js",
     "static/js/5576.e451593a.chunk.js": "/sourcing_app/static/js/5576.e451593a.chunk.js",
@@ -70,9 +70,9 @@
     "static/media/angular.jpg": "/sourcing_app/static/media/angular.2f3764e2ec8b0b47ebe6.jpg",
     "index.html": "/sourcing_app/index.html",
     "main.5f5b7baa.css.map": "/sourcing_app/static/css/main.5f5b7baa.css.map",
-    "main.377e6fc6.js.map": "/sourcing_app/static/js/main.377e6fc6.js.map",
+    "main.e3a18647.js.map": "/sourcing_app/static/js/main.e3a18647.js.map",
     "1014.1c7d44f3.chunk.css.map": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css.map",
-    "1014.2fb67fad.chunk.js.map": "/sourcing_app/static/js/1014.2fb67fad.chunk.js.map",
+    "1014.02a93c16.chunk.js.map": "/sourcing_app/static/js/1014.02a93c16.chunk.js.map",
     "3024.642c7ac4.chunk.js.map": "/sourcing_app/static/js/3024.642c7ac4.chunk.js.map",
     "1385.38bb18c3.chunk.js.map": "/sourcing_app/static/js/1385.38bb18c3.chunk.js.map",
     "5576.e451593a.chunk.js.map": "/sourcing_app/static/js/5576.e451593a.chunk.js.map",
@@ -137,6 +137,6 @@
   },
   "entrypoints": [
     "static/css/main.5f5b7baa.css",
-    "static/js/main.377e6fc6.js"
+    "static/js/main.e3a18647.js"
   ]
 }
