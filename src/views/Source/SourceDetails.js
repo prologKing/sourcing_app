@@ -17,7 +17,7 @@ const SourceDetails = () => {
                     <CForm className="row g-3 m-5">
                         <div>
                             <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                                <CButton className="light" href="/sourcing_app/#/source" shape="rounded-pill"> <FontAwesomeIcon icon={faTimes} size="lg" customClassName="nav-icon" /></CButton>
+                                <CButton className="lightbg" href="/sourcing_app/#/source" shape="rounded-pill"> <FontAwesomeIcon icon={faTimes} size="lg" customClassName="nav-icon" /></CButton>
                             </CButtonGroup>
                             <h4>Sourcing</h4>
                         </div>
@@ -60,7 +60,7 @@ const SourceDetails = () => {
                         </CCol>
                         <CCol md={12} className="mt-5">
                             <h5>Suppliers</h5>
-                            <CButton className="light float-end"> Add </CButton>
+                            <CButton className="lightbg float-end"> Add </CButton>
                             <span>Invite suppliers to this event</span>
                             <CTable hover>
                                 <CTableHead>
