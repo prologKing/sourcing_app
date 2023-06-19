@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sourcing_app/static/css/main.a1fede42.css",
-    "main.js": "/sourcing_app/static/js/main.0f674f8b.js",
+    "main.js": "/sourcing_app/static/js/main.a87165a6.js",
     "static/css/1014.1c7d44f3.chunk.css": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css",
     "static/js/1014.e17619d2.chunk.js": "/sourcing_app/static/js/1014.e17619d2.chunk.js",
     "static/js/3024.642c7ac4.chunk.js": "/sourcing_app/static/js/3024.642c7ac4.chunk.js",
@@ -19,7 +19,7 @@
     "static/js/1496.417fdfb1.chunk.js": "/sourcing_app/static/js/1496.417fdfb1.chunk.js",
     "static/js/1915.868b9b88.chunk.js": "/sourcing_app/static/js/1915.868b9b88.chunk.js",
     "static/js/8885.298fc88a.chunk.js": "/sourcing_app/static/js/8885.298fc88a.chunk.js",
-    "static/js/4463.e4101de3.chunk.js": "/sourcing_app/static/js/4463.e4101de3.chunk.js",
+    "static/js/4463.7e1196a6.chunk.js": "/sourcing_app/static/js/4463.7e1196a6.chunk.js",
     "static/js/6805.7a6cd7e9.chunk.js": "/sourcing_app/static/js/6805.7a6cd7e9.chunk.js",
     "static/js/3988.04740687.chunk.js": "/sourcing_app/static/js/3988.04740687.chunk.js",
     "static/js/5722.928276ef.chunk.js": "/sourcing_app/static/js/5722.928276ef.chunk.js",
@@ -67,7 +67,7 @@
     "static/media/angular.jpg": "/sourcing_app/static/media/angular.2f3764e2ec8b0b47ebe6.jpg",
     "index.html": "/sourcing_app/index.html",
     "main.a1fede42.css.map": "/sourcing_app/static/css/main.a1fede42.css.map",
-    "main.0f674f8b.js.map": "/sourcing_app/static/js/main.0f674f8b.js.map",
+    "main.a87165a6.js.map": "/sourcing_app/static/js/main.a87165a6.js.map",
     "1014.1c7d44f3.chunk.css.map": "/sourcing_app/static/css/1014.1c7d44f3.chunk.css.map",
     "1014.e17619d2.chunk.js.map": "/sourcing_app/static/js/1014.e17619d2.chunk.js.map",
     "3024.642c7ac4.chunk.js.map": "/sourcing_app/static/js/3024.642c7ac4.chunk.js.map",
@@ -85,7 +85,7 @@
     "1496.417fdfb1.chunk.js.map": "/sourcing_app/static/js/1496.417fdfb1.chunk.js.map",
     "1915.868b9b88.chunk.js.map": "/sourcing_app/static/js/1915.868b9b88.chunk.js.map",
     "8885.298fc88a.chunk.js.map": "/sourcing_app/static/js/8885.298fc88a.chunk.js.map",
-    "4463.e4101de3.chunk.js.map": "/sourcing_app/static/js/4463.e4101de3.chunk.js.map",
+    "4463.7e1196a6.chunk.js.map": "/sourcing_app/static/js/4463.7e1196a6.chunk.js.map",
     "6805.7a6cd7e9.chunk.js.map": "/sourcing_app/static/js/6805.7a6cd7e9.chunk.js.map",
     "3988.04740687.chunk.js.map": "/sourcing_app/static/js/3988.04740687.chunk.js.map",
     "5722.928276ef.chunk.js.map": "/sourcing_app/static/js/5722.928276ef.chunk.js.map",
@@ -131,6 +131,6 @@
   },
   "entrypoints": [
     "static/css/main.a1fede42.css",
-    "static/js/main.0f674f8b.js"
+    "static/js/main.a87165a6.js"
   ]
 }
