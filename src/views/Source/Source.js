@@ -144,7 +144,7 @@ const Source = () => {
             <CInputGroupText><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
               <CFormInput type="text" placeholder="search by event ID, name, or supplier" required />
                 <CDropdown variant="btn-group">
-                  <CDropdownToggle className="light">All Events</CDropdownToggle>
+                  <CDropdownToggle className="lightbg">All Events</CDropdownToggle>
                   <CDropdownMenu>
                     <CDropdownItem href="#">Action</CDropdownItem>
                     <CDropdownItem href="#">Another action</CDropdownItem>
