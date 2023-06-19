@@ -38,13 +38,13 @@ const LoginStep3 = () => {
                                 />
                             </CInputGroup>
                             <div className="mb-5">
-                                <CButton href="#" color="light" shape="rounded-pill" className="ms-auto">
+                                <CButton href="#" shape="rounded-pill" className="lightbg ms-auto">
                                     I didn't receive a code
                                 </CButton>
                             </div>
                             <div className="d-flex w-100 justify-content-between">
                                 <div>
-                                    <CButton href="/sourcing_app/#/verify" color="light" shape="rounded-pill">
+                                    <CButton href="/sourcing_app/#/verify" className="lightbg" shape="rounded-pill">
                                         <CIcon width={24} icon={cilArrowLeft} size="xl" />
                                     </CButton>
                                 </div>

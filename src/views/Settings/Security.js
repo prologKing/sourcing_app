@@ -11,21 +11,29 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilCopy, cilReload } from '@coreui/icons'
+import SAMLConfig from './SAMLConfig'
 
 
 const Security = () => {
+    const [isNotHidden, setIsNotHidden] = useState(false);
+
+    const controlUserForm = (val) => {
+        setIsNotHidden(!val)
+      }
     
     return (
         <CRow>
+            {isNotHidden && <SAMLConfig controlUserForm={controlUserForm} />}
             <CCol xs={12}>
-                <CCard className="mb-4 ml-2">
-                    <CCardBody style={{ overflow: 'auto', width: '100%' }}>
+                <div className="mb-4 ml-2">
+                    <div style={{ overflow: 'auto', width: '100%' }}>
                         <div>
+                            <br />
                             <h6>Authentication</h6>
                             <p><CFormCheck id="flexCheckDefault" label="Enable two-step verification for this organization" /></p>
                             <p>
                                 <CFormCheck id="flexCheckDefault" label="Enable single sign-on for this organization" />
-                                <CLink href="/sourcing_app/#/settings/samlconfig" style={{ textDecorationLine: 'none', marginLeft: '20px' }}>SAML IdP Configuration</CLink>
+                                <CLink onClick={() => controlUserForm(false)} style={{ textDecorationLine: 'none', cursor: 'pointer', marginLeft: '20px' }}>SAML IdP Configuration</CLink>
                             </p>
                         </div>
                         <div className="mt-5">
@@ -47,10 +55,10 @@ const Security = () => {
 
                         <CButton  color="dark" style={{ backgroundColor: 'black' }}> Save Changes </CButton>
                         &nbsp; &nbsp;
-                        <CButton  color="light" > Cancel </CButton>
+                        <CButton  className="lightbg" > Cancel </CButton>
                         </div>
-                    </CCardBody>
-                </CCard>
+                    </div>
+                </div>
             </CCol>
         </CRow>
     )

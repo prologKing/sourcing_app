@@ -18,10 +18,11 @@ const Account = () => {
     return (
         <CRow>
             <CCol xs={12}>
-                <CCard className="mb-4 ml-2">
-                    <CCardBody style={{ overflow: 'auto', width: '100%' }}>
+                <div className="mb-4 ml-2">
+                    <div>
                         <CRow className="justify-content-left">
                             <CCol md={8} lg={6} xl={5} style={{marginBottom: '40px'}}>
+                                <br />
                                 <CForm className="row g-3">
                                     <h5>Company Details</h5>
                                     <span className="text-medium-emphasis text-muted">This information is required for billing.</span>
@@ -81,12 +82,12 @@ const Account = () => {
                                     <p>You can delete this organization only if it has no users, active licenses, or open events.</p>
                                 </div>
                                 <div className="mb-3">
-                                    <CButton color="light" size='md'>&nbsp;&nbsp; Delete &nbsp;&nbsp;</CButton>
+                                    <CButton className="lightbg" size='md'>&nbsp;&nbsp; Delete &nbsp;&nbsp;</CButton>
                                 </div>
                             </CCol>
                         </CRow>
-                    </CCardBody>
-                </CCard>
+                    </div>
+                </div>
             </CCol>
         </CRow>
     )

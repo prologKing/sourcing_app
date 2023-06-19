@@ -5,9 +5,6 @@ const Source = React.lazy(() => import('./views/Source/Source'))
 const SourceDetails = React.lazy(() => import('./views/Source/SourceDetails'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Base = React.lazy(() => import('./views/Settings/Base'))
-const UserForm = React.lazy(() => import('./views/Settings/UserForm'))
-const SAMLConfig = React.lazy(() => import('./views/Settings/SAMLConfig'))
-const LicenseForm = React.lazy(() => import('./views/Settings/LicenseForm'))
 
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
@@ -63,9 +60,6 @@ const routes = [
   { path: '/source/details', name: 'Details', element: SourceDetails },
   { path: '/procure', name: 'Procure', element: Base },
   { path: '/settings', name: 'Settings', element: Base },
-  { path: '/settings/userform', name: 'User Form', element: UserForm },
-  { path: '/settings/samlconfig', name: 'SAML IdP', element: SAMLConfig },
-  { path: '/settings/licenseform', name: 'Activate License', element: LicenseForm },
   { path: '/base', name: 'Base', element: Cards, exact: true },
   { path: '/base/accordion', name: 'Accordion', element: Accordion },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', element: Breadcrumbs },

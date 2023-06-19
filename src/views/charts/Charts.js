@@ -6,8 +6,8 @@ const Charts = () => {
   return (
     <>
       
-    <CCard className="mb-4">
-      <CCardBody>
+    <div className="mb-4">
+      <div>
         <CRow>
           <CCol sm={5}>
             <h4 id="insights" className="card-title mb-0">
@@ -19,8 +19,8 @@ const Charts = () => {
             
           </CCol>
         </CRow>
-        </CCardBody>
-    </CCard>
+        </div>
+    </div>
   </>
   )
 }

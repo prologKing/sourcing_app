@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
   CCard,
-  CCardBody,
+  CFormInput,
   CBadge,
   CButton,
   CButtonGroup,
@@ -14,9 +14,22 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import {setCookie} from '../../components/Config';
+import UserForm from './UserForm'
 
 const Users = () => {
   const [details, setDetails] = useState([])
+  const [isNotHidden, setIsNotHidden] = useState(false)
+  const [editData, setEditData] = useState({})
+
+const getSelected =(data) =>{
+  if(data.length > 0){
+  const lastItem = data[data.length - 1]; 
+  setEditData(lastItem)
+  }else{
+    setEditData({})
+  }
+}
+
   const columns = [
     {
       key: 'firstname',
@@ -30,71 +43,81 @@ const Users = () => {
       //_props: { color: 'secondary', className: 'fw-semibold' },
     },
     { key: 'role', _style: { width: '20%' } },
-    { key: 'last_login', filter: true, sorter: false, _style: { width: '20%' } },
+    { key: 'last_login', filter: true, sorter: false, _style: { width: '40%' } },
     //{ key: 'role', filter: false, sorter: false, _style: { width: '20%' } },
     
-    {
-      key: 'show_details',
-      label: '',
-      _style: { width: '20%' },
-      filter: false,
-      sorter: false,
-      // _props: { color: 'secondary', className: 'fw-semibold' },
-    },
+    // {
+    //   key: 'show_details',
+    //   label: '',
+    //   _style: { width: '20%' },
+    //   filter: false,
+    //   sorter: false,
+    //   // _props: { color: 'secondary', className: 'fw-semibold' },
+    // },
   ]
+  const controlUserForm = (val) => {
+    setIsNotHidden(!val)
+  }
+
   const usersData = [
-    { id: 24, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    { id: 24, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
     {
       id: 1, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-      // _props: { color: 'primary', align: 'middle' },
+       _props: { align: 'middle', height: '60px' },
     },
     {
       id: 2, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
+      _props: { align: 'middle', height: '60px' },
       // _cellProps: { all: { className: 'fw-semibold' }, title: { color: 'info' } },
     },
-    { id: 3, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    { id: 3, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
     {
-      id: 4, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51'
+      id: 4, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+      _props: { align: 'middle', height: '60px' },
     },
-    { id: 5, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 6, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    {
-      id: 7,
-      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-      //_props: { color: 'warning', align: 'middle' },
-    },
-    { id: 8, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 9, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 10, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 11, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    {
-      id: 12, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-      //_selected: true 
-    },
-    { id: 13, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    {
-      id: 14,
-      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
-    },
-    { id: 15, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 16, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 17, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    {
-      id: 18,
-      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-    },
-    {
-      id: 19,
-      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-    },
-    { id: 20, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 21, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
-    { id: 22, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    { id: 23, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
-    {
-      id: 42,
-      firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
-    },
+    { id: 5, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
+    { id: 6, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
+    // {
+    //   id: 7,
+    //   firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    //   //_props: { color: 'warning', align: 'middle' },
+    // },
+    // { id: 8, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    // { id: 9, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    // { id: 10, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // { id: 11, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // {
+    //   id: 12, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    //   //_selected: true 
+    // },
+    // { id: 13, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // {
+    //   id: 14,
+    //   firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51',
+    // },
+    // { id: 15, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    // { id: 16, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // { id: 17, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // {
+    //   id: 18,
+    //   firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    // },
+    // {
+    //   id: 19,
+    //   firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    // },
+    // { id: 20, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    // { id: 21, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Read Only', last_login: '11 Jan 2023 15:51' },
+    // { id: 22, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // { id: 23, firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51' },
+    // {
+    //   id: 42,
+    //   firstname: 'Dorothy', lastname: 'Asare', email: 'dorothy.asare@hello.com', role: 'Full Admin', last_login: '11 Jan 2023 15:51',
+    // },
   ]
   const getBadge = (status) => {
     switch (status) {
@@ -117,7 +140,7 @@ const Users = () => {
 
   const GoToUserDetails = (row) => {
     setCookie("userdetails", JSON.stringify(row));
-    window.location.assign("/sourcing_app/#/settings/userform");
+    controlUserForm(false);
 }
 
   const toggleDetails = (index) => {
@@ -132,14 +155,18 @@ const Users = () => {
   }
   return (
     <CRow>
+      {isNotHidden && <UserForm controlUserForm={controlUserForm} />}
       <CCol xs={12}>
-        <CCard className="mb-4 mr-2">
-          <CCardBody style={{ overflow: 'auto', width: '100%' }}>
-            <div>
+            <div className="mb-4 ">
+              <br />
               <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
-                <CButton style={{backgroundColor: 'black'}} onClick={() => GoToUserDetails({ id: 0, firstname: '', lastname: '', email: '', role: '', last_login: null })}> <FontAwesomeIcon icon={faUserPlus} customClassName="nav-icon" /> Add</CButton>
+              {editData.id == undefined && <CButton style={{backgroundColor: 'black'}} onClick={() => GoToUserDetails({ id: 0, firstname: '', lastname: '', email: '', role: '', last_login: null })}> <FontAwesomeIcon icon={faUserPlus} customClassName="nav-icon" /> Add</CButton>}
+              {editData.id != undefined && <CButton className="lightbg" onClick={() => GoToUserDetails(editData)}> <FontAwesomeIcon icon={faEdit} customClassName="nav-icon" /> Edit</CButton>}
+              {editData.id != undefined && <CButton className="lightbg" onClick={() => GoToUserDetails(editData)}> <FontAwesomeIcon icon={faTrash} customClassName="nav-icon" /> Delete</CButton>}
               </CButtonGroup>
-
+            <CCol xs={4} className="mb-5 mr-2">
+            <CFormInput type="text" id="validationServer03" placeholder="search by name and email"  />
+            </CCol>
               <CSmartTable
                 activePage={1}
                 //cleaner
@@ -149,9 +176,9 @@ const Users = () => {
                 columnSorter
                 //footer
                 items={usersData}
-                itemsPerPageSelect
-                itemsPerPage={5}
-                pagination
+                // itemsPerPageSelect
+                // itemsPerPage={5}
+                // pagination
                 scopedColumns={{
                   status: (item) => (
                     <td>
@@ -207,18 +234,18 @@ const Users = () => {
                 }}
                 selectable
                 sorterValue={{ column: 'name', state: 'asc' }}
-                tableFilter
+                onSelectedItemsChange={getSelected}
+                //tableFilter
                 tableHeadProps={{
-                  color: 'secondary',
+                  color: 'light',
                 }}
                 tableProps={{
                   hover: true,
                 }}
               />
             </div>
-          </CCardBody>
-        </CCard>
       </CCol>
+      
     </CRow>
   )
 }

@@ -1,1 +1,26 @@
-// Here you can add other styles
+.full-screen {
+    position: fixed;
+    color: black;
+    padding-top: 5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 10000;
+    background: rgba(252, 252, 252, 1);
+}
+
+.lightbg {
+    background-color: #ecebeb; 
+    color: black; 
+    border-color: white;
+}
+
+.lightbg:hover {
+    background-color: #c1c0c0; 
+    color: black; 
+    border-color: white;
+}

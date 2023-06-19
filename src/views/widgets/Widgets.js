@@ -12,8 +12,8 @@ const Widgets = () => {
   return (
     <>
       
-    <CCard className="mb-4">
-      <CCardBody>
+    <div className="mb-4">
+      <div>
         <CRow>
           <CCol sm={5}>
             <h4 id="pay" className="card-title mb-0">
@@ -25,8 +25,8 @@ const Widgets = () => {
             
           </CCol>
         </CRow>
-        </CCardBody>
-    </CCard>
+        </div>
+    </div>
   </>
   )
 }

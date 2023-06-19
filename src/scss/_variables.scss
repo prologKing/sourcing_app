@@ -7,13 +7,13 @@
 // scss-docs-start gray-color-variables
  $white:     #fff !default;
 $gray-base: #000 !default;
-// $gray-100:  #ebedef !default;
+$gray-100:  #fff !default;
 // $gray-200:  #d8dbe0 !default;
 // $gray-300:  #c4c9d0 !default;
 // $gray-400:  #b1b7c1 !default;
 // $gray-500:  #9da5b1 !default;
 // $gray-600:  #8a93a2 !default;
-// $gray-700:  #768192 !default;
+ $gray-700:  #768192 !default;
 // $gray-800:  #636f83 !default;
 // $gray-900:  #4f5d73 !default;
  $black:     #000015 !default;
@@ -1045,6 +1045,10 @@ $gray-base: #000 !default;
 // $nav-pills-border-radius:           $border-radius !default;
 // $nav-pills-link-active-color:       $component-active-color !default;
 // $nav-pills-link-active-bg:          $component-active-bg !default;
+
+$nav-underline-gap:                 1rem !default;
+$nav-underline-border-width:        .125rem !default;
+$nav-underline-link-active-color:   $gray-700 !default;
 // scss-docs-end nav-variables
 
 
@@ -1707,12 +1711,12 @@ $gray-base: #000 !default;
 // $sidebar-footer-height-transition:         height .15s, padding .15s !default;
 
 // $sidebar-toggler-height:                   3rem !default;
- $sidebar-toggler-bg:                       $black !default;
+ $sidebar-toggler-bg:                       $white !default;
 // $sidebar-toggler-transition:               transform .15s !default;
 
 // $sidebar-toggler-indicator-width:          4rem !default;
 // $sidebar-toggler-indicator-height:         3rem !default;
- $sidebar-toggler-indicator-color:          $white !default;
+ $sidebar-toggler-indicator-color:          $black !default;
 // $sidebar-toggler-indicator-icon:           url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath fill='#{$sidebar-toggler-indicator-color}' d='M9.148 2.352l-4.148 4.148 4.148 4.148q0.148 0.148 0.148 0.352t-0.148 0.352l-1.297 1.297q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.797q-0.148-0.148-0.148-0.352t0.148-0.352l5.797-5.797q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.297q0.148 0.148 0.148 0.352t-0.148 0.352z'/%3E%3C/svg%3E") !default;
 // $sidebar-toggler-hover-bg:                 rgba(0, 0, 0, .3) !default;
 // $sidebar-toggler-indicator-hover-color:    $sidebar-nav-link-hover-color !default;
@@ -1721,7 +1725,7 @@ $gray-base: #000 !default;
 
 // Footer
 // scss-docs-start footer-variables
-// $footer-min-height:    3rem !default;
+ $footer-min-height:    3.1rem !default;
 // $footer-padding-y:     $spacer / 2 !default;
 // $footer-padding-x:     $spacer !default;
 // $footer-bg:            $gray-100 !default;

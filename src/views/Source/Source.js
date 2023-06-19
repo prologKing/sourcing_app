@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import {
-  CCard,
-  CCardBody,
   CBadge,
   CButton,
+  CInputGroupText,
   CButtonGroup,
-  CCollapse,
-  CCardHeader,
+  CInputGroup,
+  CFormInput,
   CDropdown,
   CDropdownDivider,
   CDropdownItem,
@@ -19,7 +18,7 @@ import {
   CSmartTable
 } from '@coreui/react-pro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faEdit, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faEdit, faSearch, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 const Source = () => {
@@ -37,71 +36,78 @@ const Source = () => {
       //_props: { color: 'secondary', className: 'fw-semibold' },
     },
     { key: 'status', _style: { width: '20%' } },
-    { key: 'close_date', filter: true, sorter: false, _style: { width: '20%' } },
+    { key: 'close_date', filter: true, sorter: false, _style: { width: '40%' } },
     //{ key: 'role', filter: false, sorter: false, _style: { width: '20%' } },
     
-    {
-      key: 'show_details',
-      label: '',
-      _style: { width: '20%' },
-      filter: false,
-      sorter: false,
-      // _props: { color: 'secondary', className: 'fw-semibold' },
-    },
+    // {
+    //   key: 'show_details',
+    //   label: '',
+    //   _style: { width: '20%' },
+    //   filter: false,
+    //   sorter: false,
+    //   // _props: { color: 'secondary', className: 'fw-semibold' },
+    // },
   ]
   const usersData = [
-    { id: 0, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51' },
+    { id: 0, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51', 
+    _props: { align: 'middle', height: '60px' }, },
     {
       id: 1, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+      _props: { align: 'middle', height: '60px' },
       // _props: { color: 'primary', align: 'middle' },
     },
     {
       id: 2, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+      _props: { align: 'middle', height: '60px' },
       // _cellProps: { all: { className: 'fw-semibold' }, title: { color: 'info' } },
     },
-    { id: 3, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    { id: 3, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
     {
-      id: 4, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51'
+      id: 4, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51',
+      _props: { align: 'middle', height: '60px' },
     },
-    { id: 5, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    { id: 6, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51' },
-    {
-      id: 7,
-      source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
-      //_props: { color: 'warning', align: 'middle' },
-    },
-    { id: 8, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    { id: 9, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    { id: 10, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    { id: 11, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    {
-      id: 12, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
-      //_selected: true 
-    },
-    { id: 13, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51' },
-    {
-      id: 14,
-      source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
-    },
-    { id: 15, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    { id: 16, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    { id: 17, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    {
-      id: 18,
-      source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
-    },
-    {
-      id: 19,
-      source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
-    },
-    { id: 20, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    { id: 21, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    { id: 22, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    { id: 23, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    {
-      id: 42,
-      source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
-    },
+    { id: 5, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
+    { id: 6, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    _props: { align: 'middle', height: '60px' }, },
+    // {
+    //   id: 7,
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   //_props: { color: 'warning', align: 'middle' },
+    // },
+    // { id: 8, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    // { id: 9, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    // { id: 10, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 11, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // {
+    //   id: 12, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   //_selected: true 
+    // },
+    // { id: 13, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51' },
+    // {
+    //   id: 14,
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+    // },
+    // { id: 15, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    // { id: 16, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 17, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // {
+    //   id: 18,
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    // },
+    // {
+    //   id: 19,
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    // },
+    // { id: 20, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    // { id: 21, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
+    // { id: 22, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 23, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // {
+    //   id: 42,
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    // },
   ]
   const getBadge = (status) => {
     switch (status) {
@@ -129,16 +135,16 @@ const Source = () => {
   }
   return (
     <CRow>
-      <CCol xs={12}>
-        <CCard className="mb-4 mr-2">
-          <CCardHeader>
-            <h4>Sourcing</h4>
-          </CCardHeader>
-          <CCardBody style={{ overflow: 'auto', width: '100%' }}>
-            <div>
-              <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
+      <CCol xs={12} className="small text-medium-emphasis">
+            <h4 className="mb-5">Sourcing</h4>
+            <div style={{ overflow: 'auto', width: '100%' }}>
+            <CButton style={{backgroundColor: 'black'}} className="float-end" href="/sourcing_app/#/source/details"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /> Add</CButton>
+            <CCol xs={6}>
+            <CInputGroup>
+            <CInputGroupText><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
+              <CFormInput type="text" placeholder="search by event ID, name, or supplier" required />
                 <CDropdown variant="btn-group">
-                  <CDropdownToggle color="light">All Events</CDropdownToggle>
+                  <CDropdownToggle className="light">All Events</CDropdownToggle>
                   <CDropdownMenu>
                     <CDropdownItem href="#">Action</CDropdownItem>
                     <CDropdownItem href="#">Another action</CDropdownItem>
@@ -147,9 +153,9 @@ const Source = () => {
                     <CDropdownItem href="#">Separated link</CDropdownItem>
                   </CDropdownMenu>
                 </CDropdown>
-                <CButton color="dark" href="/sourcing_app/#/source/details"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /></CButton>
-              </CButtonGroup>
-
+              </CInputGroup>
+             </CCol>
+             <br />
               <CSmartTable
                 activePage={1}
                 //cleaner
@@ -159,13 +165,18 @@ const Source = () => {
                 columnSorter
                 //footer
                 items={usersData}
-                itemsPerPageSelect
-                itemsPerPage={5}
-                pagination
+                //itemsPerPageSelect
+                // itemsPerPage={5}
+                // pagination
                 scopedColumns={{
                   status: (item) => (
                     <td>
                       <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
+                    </td>
+                  ),
+                  source_id: (item) => (
+                    <td>
+                      <span className='text-primary'>{item.source_id}</span>
                     </td>
                   ),
                   show_details: (item) => {
@@ -211,19 +222,17 @@ const Source = () => {
                   //   )
                   // },
                 }}
+               
                 selectable
                 sorterValue={{ column: 'name', state: 'asc' }}
-                tableFilter
                 tableHeadProps={{
-                  color: 'secondary',
+                  color: 'light',
                 }}
                 tableProps={{
                   hover: true,
                 }}
               />
             </div>
-          </CCardBody>
-        </CCard>
       </CCol>
     </CRow>
   )
