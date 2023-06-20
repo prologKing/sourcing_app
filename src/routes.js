@@ -2,6 +2,8 @@ import React from 'react'
 
 const Dashboard = React.lazy(() => import('./buyer/views/dashboard/Dashboard'))
 const SupplierDashboard = React.lazy(() => import('./supplier/views/dashboard/Dashboard'))
+const Events = React.lazy(() => import('./supplier/views/RFx/Events'))
+const EventDetails = React.lazy(() => import('./supplier/views/RFx/EventDetails'))
 const Source = React.lazy(() => import('./buyer/views/Source/Source'))
 const SourceDetails = React.lazy(() => import('./buyer/views/Source/SourceDetails'))
 const Colors = React.lazy(() => import('./buyer/views/theme/colors/Colors'))
@@ -59,6 +61,8 @@ const routes = [
   { path: '/supplier-home', name: '', element: SupplierDashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/source', name: 'Source', element: Source },
+  { path: '/events', name: 'Events', element: Events },
+  { path: '/events/details', name: 'Events', element: EventDetails },
   { path: '/source/details', name: 'Details', element: SourceDetails },
   { path: '/procure', name: 'Procure', element: Base },
   { path: '/settings', name: 'Settings', element: Base },

@@ -144,7 +144,7 @@ const License = () => {
     <CRow>
       {isNotHidden && <LicenseForm controlUserForm={controlUserForm} />}
       <CCol xs={12}>
-        <div className="mb-4 mr-2" style={{ overflow: 'auto', width: '100%' }}>
+        <div className="mb-4 mr-2">
           <br />
           <h6>Packages</h6>
           <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">

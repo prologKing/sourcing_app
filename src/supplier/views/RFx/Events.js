@@ -1,27 +1,22 @@
 import React, { useState } from 'react'
 import {
-  CBadge,
   CButton,
   CInputGroupText,
   CButtonGroup,
   CInputGroup,
   CFormInput,
-  CDropdown,
-  CDropdownDivider,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
   CCol,
   CRow,
 } from '@coreui/react'
 import {
   CSmartTable
 } from '@coreui/react-pro'
+import {setCookie} from '../../../components/Config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus, faEdit, faSearch, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 
-const Source = () => {
+const Events = () => {
   const [details, setDetails] = useState([])
   const columns = [
     {
@@ -32,11 +27,12 @@ const Source = () => {
     },
     {
       key: 'title',
-      _style: { width: '40%' },
+      _style: { width: '30%' },
       //_props: { color: 'secondary', className: 'fw-semibold' },
     },
-    { key: 'status', _style: { width: '20%' } },
-    { key: 'close_date', filter: true, sorter: false, _style: { width: '40%' } },
+    { key: 'time_remaining', _style: { width: '20%' } },
+    { key: 'acknowledge', _style: { width: '20%' } },
+    { key: 'buyer', filter: true, sorter: false, _style: { width: '10%' } },
     //{ key: 'role', filter: false, sorter: false, _style: { width: '20%' } },
 
     // {
@@ -48,77 +44,82 @@ const Source = () => {
     //   // _props: { color: 'secondary', className: 'fw-semibold' },
     // },
   ]
+
+  const getDetails =(row) => {
+    setCookie("eventdetails", JSON.stringify(row));
+    window.location.replace("/sourcing_app/#/events/details");
+  } 
   const usersData = [
     {
-      id: 0, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+      id: 0, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
     },
     {
-      id: 1, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+      id: 1, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
       // _props: { color: 'primary', align: 'middle' },
     },
     {
-      id: 2, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+      id: 2, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
       // _cellProps: { all: { className: 'fw-semibold' }, title: { color: 'info' } },
     },
     {
-      id: 3, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+      id: 3, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
     },
     {
-      id: 4, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51',
+      id: 4, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
     },
     {
-      id: 5, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51',
+      id: 5, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
     },
     {
-      id: 6, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+      id: 6, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
       _props: { align: 'middle', height: '60px' },
     },
     // {
     //   id: 7,
-    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     //   //_props: { color: 'warning', align: 'middle' },
     // },
-    // { id: 8, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    // { id: 9, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    // { id: 10, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    // { id: 11, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 8, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 9, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 10, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 11, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
     // {
-    //   id: 12, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   id: 12, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     //   //_selected: true 
     // },
-    // { id: 13, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51' },
+    // { id: 13, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
     // {
     //   id: 14,
-    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51',
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     // },
-    // { id: 15, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    // { id: 16, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    // { id: 17, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 15, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 16, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 17, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
     // {
     //   id: 18,
-    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     // },
     // {
     //   id: 19,
-    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     // },
-    // { id: 20, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    // { id: 21, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Draft', close_date: '11 Jan 2023 15:51' },
-    // { id: 22, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
-    // { id: 23, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Closed', close_date: '11 Jan 2023 15:51' },
+    // { id: 20, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 21, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 22, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
+    // { id: 23, source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank' },
     // {
     //   id: 42,
-    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops', status: 'Open', close_date: '11 Jan 2023 15:51',
+    //   source_id: 'RFX-34001293', title: 'Supply of Lenovo Laptops and Computers', time_remaining: '10 Days 5 Hours', acknowledge: 'Y', buyer: 'Maize Bank',
     // },
   ]
-  const getBadge = (status) => {
-    switch (status) {
+  const getBadge = (time_remaining) => {
+    switch (time_remaining) {
       case 'Open':
         return 'success'
       case 'Closed':
@@ -144,35 +145,21 @@ const Source = () => {
   return (
     <CRow>
       <CCol xs={12} className="small text-medium-emphasis">
-        <h4 className="mb-5">Sourcing</h4>
-        <div>
-          <CButton style={{ backgroundColor: 'black' }} className="float-end" href="/sourcing_app/#/source/details"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /> Add</CButton>
+        <h4 className="mb-5">Events</h4>
+        <div >
           <CRow>
-          <CCol xs={6}>
+          <CCol xs={5}>
             <CInputGroup>
               <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
-              <CFormInput type="text" placeholder="search by event ID, name, or supplier" required />
+              <CFormInput type="text" placeholder="search by event ID, name, or buyer" required />
             </CInputGroup>
             </CCol>
-            <CCol xs={4}>
-            <CDropdown variant="btn-group ml-2">
-              <CDropdownToggle className="lightbg">All Events</CDropdownToggle>
-              <CDropdownMenu>
-                <CDropdownItem href="#">Action</CDropdownItem>
-                <CDropdownItem href="#">Another action</CDropdownItem>
-                <CDropdownItem href="#">Something else here</CDropdownItem>
-                <CDropdownDivider />
-                <CDropdownItem href="#">Separated link</CDropdownItem>
-              </CDropdownMenu>
-            </CDropdown>
-
-          </CCol>
           </CRow>
           <br />
           <CSmartTable
             activePage={1}
             //cleaner
-            clickableRows
+            //clickableRows
             columns={columns}
             //columnFilter
             columnSorter
@@ -182,14 +169,14 @@ const Source = () => {
             // itemsPerPage={5}
             // pagination
             scopedColumns={{
-              status: (item) => (
-                <td>
-                  <CBadge color={getBadge(item.status)}>{item.status}</CBadge>
-                </td>
-              ),
+            //   time_remaining: (item) => (
+            //     <td>
+            //       <CBadge color={getBadge(item.time_remaining)}>{item.time_remaining}</CBadge>
+            //     </td>
+            //   ),
               source_id: (item) => (
                 <td>
-                  <span className='text-primary'>{item.source_id}</span>
+                  <span className='text-primary' role="button" onClick={() => getDetails(item)}>{item.source_id}</span>
                 </td>
               ),
               show_details: (item) => {
@@ -236,7 +223,7 @@ const Source = () => {
               // },
             }}
 
-            selectable
+            //selectable
             sorterValue={{ column: 'name', state: 'asc' }}
             tableHeadProps={{
               color: 'light',
@@ -251,4 +238,4 @@ const Source = () => {
   )
 }
 
-export default Source
+export default Events

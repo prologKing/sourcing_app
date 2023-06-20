@@ -26,7 +26,7 @@ const Security = () => {
             {isNotHidden && <SAMLConfig controlUserForm={controlUserForm} />}
             <CCol xs={12}>
                 <div className="mb-4 ml-2">
-                    <div style={{ overflow: 'auto', width: '100%' }}>
+                    <div>
                         <div>
                             <br />
                             <h6>Authentication</h6>

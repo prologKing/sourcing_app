@@ -129,7 +129,7 @@ const Suppliers = () => {
     <CRow>
       <CCol xs={12}>
         <br />
-        <div className="mb-4 mr-2" style={{ overflow: 'auto', width: '100%' }}>
+        <div className="mb-4 mr-2">
           <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
             <CButton style={{ backgroundColor: 'black', marginBottom: '15px' }}> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add</CButton>
           </CButtonGroup>

@@ -137,7 +137,7 @@ const Source = () => {
     <CRow>
       <CCol xs={12} className="small text-medium-emphasis">
             <h4 className="mb-5">Sourcing</h4>
-            <div style={{ overflow: 'auto', width: '100%' }}>
+            <div>
             <CButton style={{backgroundColor: 'black'}} className="float-end" href="/sourcing_app/#/source/details"> <FontAwesomeIcon icon={faCartPlus} customClassName="nav-icon" /> Add</CButton>
             <CCol xs={6}>
             <CInputGroup>

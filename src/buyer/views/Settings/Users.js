@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {
-  CCard,
+  CInputGroup,
+  CInputGroupText,
   CFormInput,
   CBadge,
   CButton,
@@ -12,7 +13,7 @@ import {
   CSmartTable
 } from '@coreui/react-pro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faSearch, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import {setCookie} from '../../../components/Config';
 import UserForm from './UserForm'
 
@@ -165,7 +166,10 @@ const getSelected =(data) =>{
               {editData.id != undefined && <CButton className="lightbg" onClick={() => GoToUserDetails(editData)}> <FontAwesomeIcon icon={faTrash} customClassName="nav-icon" /> Delete</CButton>}
               </CButtonGroup>
             <CCol xs={4} className="mb-5 mr-2">
+            <CInputGroup>
+            <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
             <CFormInput type="text" id="validationServer03" placeholder="search by name and email"  />
+            </CInputGroup>
             </CCol>
               <CSmartTable
                 activePage={1}

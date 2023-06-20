@@ -14,7 +14,7 @@ const _nav2 = [
   {
     component: CNavItem,
     name: 'RFx',
-    to: '/source',
+    to: '/events',
     icon: <FontAwesomeIcon icon={faCartShopping} customClassName="nav-icon" />,
   },
   {
