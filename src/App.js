@@ -12,18 +12,18 @@ const loading = (
 const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 
 // Pages
-const Login = React.lazy(() => import('./views/pages/login/Login'))
-const LoginStep2 = React.lazy(() => import('./views/pages/login/LoginStep2'))
-const LoginStep3 = React.lazy(() => import('./views/pages/login/LoginStep3'))
-const PasswordRecovery = React.lazy(() => import('./views/pages/login/PasswordRecovery'))
-const PasswordReset = React.lazy(() => import('./views/pages/login/PasswordReset'))
-const TimeOut = React.lazy(() => import('./views/pages/sessiontimeout/TimeOut'))
-const Welcome = React.lazy(() => import('./views/pages/Welcome'))
-const CompanySetup = React.lazy(() => import('./views/pages/register/CompanySetup'))
-const Register = React.lazy(() => import('./views/pages/register/Register'))
-const Activate = React.lazy(() => import('./views/pages/register/Activate'))
-const Page404 = React.lazy(() => import('./views/pages/page404/Page404'))
-const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
+const Login = React.lazy(() => import('./shared_views/pages/login/Login'))
+const LoginStep2 = React.lazy(() => import('./shared_views/pages/login/LoginStep2'))
+const LoginStep3 = React.lazy(() => import('./shared_views/pages/login/LoginStep3'))
+const PasswordRecovery = React.lazy(() => import('./shared_views/pages/login/PasswordRecovery'))
+const PasswordReset = React.lazy(() => import('./shared_views/pages/login/PasswordReset'))
+const TimeOut = React.lazy(() => import('./shared_views/pages/sessiontimeout/TimeOut'))
+const Welcome = React.lazy(() => import('./shared_views/pages/Welcome'))
+const CompanySetup = React.lazy(() => import('./shared_views/pages/register/CompanySetup'))
+const Register = React.lazy(() => import('./shared_views/pages/register/Register'))
+const Activate = React.lazy(() => import('./shared_views/pages/register/Activate'))
+const Page404 = React.lazy(() => import('./shared_views/pages/page404/Page404'))
+const Page500 = React.lazy(() => import('./shared_views/pages/page500/Page500'))
 
 class App extends Component {
   render() {

@@ -16,6 +16,7 @@ $gray-100:  #fff !default;
  $gray-700:  #768192 !default;
 // $gray-800:  #636f83 !default;
 // $gray-900:  #4f5d73 !default;
+ $blackshade:     #8f8f92b8 !default;
  $black:     #000015 !default;
 // scss-docs-end gray-color-variables
 
@@ -1679,11 +1680,11 @@ $nav-underline-link-active-color:   $gray-700 !default;
  $sidebar-nav-link-icon-color:              $black !default;
 
  $sidebar-nav-link-hover-color:             rgba($black, .4) !default;
- $sidebar-nav-link-hover-bg:                rgba($black, .05) !default;
+ $sidebar-nav-link-hover-bg:                rgba($blackshade, .2) !default;
  $sidebar-nav-link-hover-icon-color:        rgba($black, .4) !default;
 
  $sidebar-nav-link-active-color:            rgba($black, .6) !default;
- $sidebar-nav-link-active-bg:               rgba($black, .09) !default;
+ $sidebar-nav-link-active-bg:               rgba($blackshade, 0.2) !default;
  $sidebar-nav-link-active-icon-color:       $black !default;
 
 // $sidebar-nav-link-disabled-color:          $disabled-inverse !default;

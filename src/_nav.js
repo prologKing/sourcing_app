@@ -8,7 +8,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Home',
-    to: '/home',
+    to: '/buyer-home',
     icon: <FontAwesomeIcon icon={faHome} customClassName="nav-icon" />,
   },
   {
