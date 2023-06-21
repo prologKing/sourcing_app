@@ -20,13 +20,13 @@ const _nav2 = [
   {
     component: CNavItem,
     name: 'Orders',
-    to: '/procure',
+    to: '/orders',
     icon: <FontAwesomeIcon icon={faTruck} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Invoices',
-    to: '/pay',
+    to: '/invoices',
     icon: <FontAwesomeIcon icon={faSackDollar} size="lg" customClassName="nav-icon" />,
   },
   {

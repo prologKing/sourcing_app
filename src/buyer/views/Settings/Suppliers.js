@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import {
-  CCard,
-  CCardBody,
+  CInputGroupText,
+  CInputGroup,
+  CFormInput,
   CBadge,
   CButton,
   CButtonGroup,
@@ -12,7 +13,7 @@ import {
   CSmartTable
 } from '@coreui/react-pro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faTrash, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrash, faPlus, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 const Suppliers = () => {
@@ -133,6 +134,14 @@ const Suppliers = () => {
           <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
             <CButton style={{ backgroundColor: 'black', marginBottom: '15px' }}> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add</CButton>
           </CButtonGroup>
+          <CRow>
+          <CCol xs={5}>
+            <CInputGroup>
+              <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
+              <CFormInput type="text" placeholder="search by name or industry" required />
+            </CInputGroup>
+            </CCol>
+          </CRow>
           <CSmartTable
             activePage={1}
             //cleaner

@@ -2,8 +2,16 @@ import React from 'react'
 
 const Dashboard = React.lazy(() => import('./buyer/views/dashboard/Dashboard'))
 const SupplierDashboard = React.lazy(() => import('./supplier/views/dashboard/Dashboard'))
+const Invoices = React.lazy(() => import('./supplier/views/Invoices/Invoices'))
+const InvoiceDetails = React.lazy(() => import('./supplier/views/Invoices/InvoiceDetails'))
+const InvoiceForm = React.lazy(() => import('./supplier/views/Invoices/InvoiceForm'))
+const Orders = React.lazy(() => import('./supplier/views/Orders/Orders'))
+const OrderDetails = React.lazy(() => import('./supplier/views/Orders/OrderDetails'))
+const OrderMessages = React.lazy(() => import('./supplier/views/Orders/Messages'))
 const Events = React.lazy(() => import('./supplier/views/RFx/Events'))
 const EventDetails = React.lazy(() => import('./supplier/views/RFx/EventDetails'))
+const Response = React.lazy(() => import('./supplier/views/RFx/Response'))
+const Messages = React.lazy(() => import('./supplier/views/RFx/Messages'))
 const Source = React.lazy(() => import('./buyer/views/Source/Source'))
 const SourceDetails = React.lazy(() => import('./buyer/views/Source/SourceDetails'))
 const Colors = React.lazy(() => import('./buyer/views/theme/colors/Colors'))
@@ -60,10 +68,18 @@ const routes = [
   { path: '/buyer-home', name: '', element: Dashboard },
   { path: '/supplier-home', name: '', element: SupplierDashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
+  { path: '/invoices', name: 'Invoices', element: Invoices },
+  { path: '/invoices/details', name: 'Invoice Details', element: InvoiceDetails },
+  { path: '/invoices/form', name: 'Invoice Form', element: InvoiceForm },
   { path: '/source', name: 'Source', element: Source },
-  { path: '/events', name: 'Events', element: Events },
-  { path: '/events/details', name: 'Events', element: EventDetails },
   { path: '/source/details', name: 'Details', element: SourceDetails },
+  { path: '/events', name: 'Events', element: Events },
+  { path: '/events/details', name: 'Event Details', element: EventDetails },
+  { path: '/events/details/response', name: 'Events Details', element: Response },
+  { path: '/events/details/messages', name: 'Events Details', element: Messages },
+  { path: '/orders', name: 'Orders', element: Orders },
+  { path: '/orders/details', name: 'Order Details', element: OrderDetails },
+  { path: '/orders/details/messages', name: 'Order Details', element: OrderMessages },
   { path: '/procure', name: 'Procure', element: Base },
   { path: '/settings', name: 'Settings', element: Base },
   { path: '/base', name: 'Base', element: Cards, exact: true },

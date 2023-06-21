@@ -20,13 +20,16 @@ const EventDetails = () => {
                     <div>
                         
                         <h1>{event.source_id}</h1>
-                        <CButton className='lightbg float-end'>
+                        
+                        <CButton href='/sourcing_app/#/events/details/messages' className='lightbg float-end'>
                             Messages <CBadge color="primary">2</CBadge>
                         </CButton>
-                        <CButton className='lightbg float-end'>
+                        <CButton href='/sourcing_app/#/events/details/response' className='lightbg float-end'>
                             Create Response
                         </CButton>
+                        <CCol xs={6}>
                         <h5 className='mb-5'>Supply of Lenovo Laptops and Computers</h5>
+                        </CCol>
                         <div className='mb-5'>
                             <h5>Event Details</h5>
                             <div className='mb-3'>
