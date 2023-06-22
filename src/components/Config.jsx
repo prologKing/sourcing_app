@@ -3,7 +3,20 @@ const DoLogin = (formItems) => verifyOTP(formItems)
 const verifyOTP = (formItems) => {
     setUser(formItems);
     window.location.replace("/home");
-}          
+}  
+
+const LoadSupplierSection = () => {
+    setAppSection(1);
+    window.location.replace("/sourcing_app/#/supplier-home");
+    window.location.reload(true);
+} 
+
+const LoadBuyerSection = () => {
+    setAppSection(0);
+    window.location.replace("/sourcing_app/#/buyer-home");
+    window.location.reload(true);
+} 
+
 const Logout = () => {
     sessionStorage.removeItem("kotage_user");
     window.location.replace("/");
@@ -33,6 +46,8 @@ const Config = () => { };
 
 Config.DoLogin = DoLogin;
 Config.Logout = Logout;
+Config.LoadSupplierSection = LoadSupplierSection;
+Config.LoadBuyerSection = LoadBuyerSection;
 Config.SessionTimeout = SessionTimeout;
 Config.LoggedIn = LoggedIn;
 Config.setUser = setUser;
@@ -48,6 +63,8 @@ export default Config;
 export {
     DoLogin,
     Logout,
+    LoadSupplierSection,
+    LoadBuyerSection,
     SessionTimeout,
     LoggedIn,
     setUser,

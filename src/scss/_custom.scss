@@ -39,5 +39,16 @@
 
 .whitebg:active {
     background-color: #c1c0c0;
-  }
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0e0e0e;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
 

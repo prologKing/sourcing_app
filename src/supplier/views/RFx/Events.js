@@ -150,8 +150,8 @@ const Events = () => {
           <CRow>
           <CCol xs={5}>
             <CInputGroup>
-              <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
-              <CFormInput type="text" placeholder="search by event ID, name, or buyer" required />
+              <CInputGroupText className='text-muted bg-light border-right-0'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
+              <CFormInput type="text" className='border-left-0' placeholder="search by event ID, name, or buyer" required />
             </CInputGroup>
             </CCol>
           </CRow>

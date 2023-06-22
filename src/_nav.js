@@ -41,12 +41,6 @@ const _nav = [
     to: '/settings',
     icon: <FontAwesomeIcon icon={faGear} size="lg" customClassName="nav-icon" />,
   },
-  {
-    component: CNavItem,
-    name: 'Sign Out',
-    to: '/login',
-    icon: <FontAwesomeIcon icon={faSignOut} size="lg" customClassName="nav-icon" />,
-  },
   // {
   //   component: CNavGroup,
   //   name: 'Base',

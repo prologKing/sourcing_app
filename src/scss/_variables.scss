@@ -306,6 +306,7 @@ $gray-100:  #fff !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
+$dropdown-spacing: 1rem !default;
 // $spacer: 1rem !default;
 // $spacers: (
 //   0: 0,
@@ -444,7 +445,7 @@ $gray-100:  #fff !default;
 // scss-docs-end box-shadow-variables
 
 // $component-active-color:      $high-emphasis-inverse !default;
-// $component-active-bg:         $primary !default;
+ $component-active-bg:         $blackshade !default;
 
 // scss-docs-start caret-variables
 // $caret-width:                 .3em !default;
@@ -1102,7 +1103,7 @@ $nav-underline-link-active-color:   $gray-700 !default;
 //
 // Dropdown menu container and contents.
 // scss-docs-start dropdown-variables
-// $dropdown-min-width:                10rem !default;
+ $dropdown-min-width:                15rem !default;
 // $dropdown-padding-x:                0 !default;
 // $dropdown-padding-y:                .5rem !default;
 // $dropdown-spacer:                   .125rem !default;
@@ -1126,10 +1127,10 @@ $nav-underline-link-active-color:   $gray-700 !default;
 
 // $dropdown-link-disabled-color:      $gray-500 !default;
 
-// $dropdown-item-padding-y:           $spacer / 4 !default;
+ $dropdown-item-padding-y:           $dropdown-spacing;
 // $dropdown-item-padding-x:           $spacer !default;
 
-// $dropdown-header-color:             $gray-600 !default;
+ $dropdown-header-color:             $black !default;
 // $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
 // scss-docs-end dropdown-variables
 

@@ -13,12 +13,13 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilBell, cilGroup, cilMenu } from '@coreui/icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBell, faCaretLeft, faCaretRight, faDumbbell, faFaceMehBlank, faGear, faGlobeAmericas, faSignOut, faUserGroup, faUsers } from '@fortawesome/free-solid-svg-icons'
 
-import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/min-logo'
 
-const App2Header = () => {
+const AppHeader = () => {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
@@ -39,12 +40,12 @@ const App2Header = () => {
         <CHeaderNav>
         <CNavItem>
             <CNavLink href="#">
-              <CIcon icon={cilGroup} size="lg" />
+              <FontAwesomeIcon icon={faUserGroup} />
             </CNavLink>
           </CNavItem>
           <CNavItem>
             <CNavLink href="#">
-              <CIcon icon={cilBell} size="lg" />
+            <FontAwesomeIcon icon={faBell} />
             </CNavLink>
           </CNavItem>
         </CHeaderNav>
@@ -55,4 +56,4 @@ const App2Header = () => {
   )
 }
 
-export default App2Header
+export default AppHeader
