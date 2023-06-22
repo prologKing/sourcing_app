@@ -2,7 +2,6 @@ import React from 'react'
 import { CContainer } from '@coreui/react'
 import { CButton, CCol, CForm, CFormInput, CInputGroup, CInputGroupText, CFormSelect, CRow } from '@coreui/react'
 import PageHeaderWithAvatar from '../PageHeaderWithAvatar'
-import {setUser} from '../../../components/Config';
 /* eslint-disable */
 const CompanySetup = () => {
   return (
@@ -60,7 +59,7 @@ const CompanySetup = () => {
                 </CInputGroup>
               </CCol>
               <div className="d-grid mb-3">
-                <CButton href="#" onClick={()=> setUser(true)} color="dark" style={{ backgroundColor: 'black' }}>Finish</CButton>
+                <CButton href="/sourcing_app/#/welcome"  color="dark" style={{ backgroundColor: 'black' }}>Finish</CButton>
               </div>
             </CForm>
           </CCol>

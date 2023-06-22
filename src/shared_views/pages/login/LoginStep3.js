@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState } from 'react'
 import { CContainer } from '@coreui/react'
-import {setCookie} from '../../../components/Config';
+import {setCookie, setUser} from '../../../components/Config';
 import { CButton, CCol, CForm, CFormInput, CInputGroup, CRow } from '@coreui/react'
 import PageHeaderWithoutAvatar from '../PageHeaderWithoutAvatar'
 import { cilArrowLeft, cilArrowRight } from '@coreui/icons'
@@ -49,7 +49,7 @@ const LoginStep3 = () => {
                                     </CButton>
                                 </div>
                                 <div className="justify-content-md-end">
-                                    <CButton href="/sourcing_app/#/companysetup" color="dark" shape="rounded-pill" style={{ backgroundColor: 'black' }}>
+                                    <CButton href="/sourcing_app/#/companysetup" onClick={()=> setUser(true)} color="dark" shape="rounded-pill" style={{ backgroundColor: 'black' }}>
                                         Next&nbsp;&nbsp;<CIcon width={15} icon={cilArrowRight} size="xl" />
                                     </CButton>
                                 </div>

@@ -1,20 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   CContainer,
   CHeader,
   CHeaderBrand,
-  CHeaderDivider,
   CHeaderNav,
   CHeaderToggler,
   CNavLink,
   CNavItem,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import { cilBell, cilGroup, cilMenu } from '@coreui/icons'
+import { cilMenu } from '@coreui/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faCaretLeft, faCaretRight, faDumbbell, faFaceMehBlank, faGear, faGlobeAmericas, faSignOut, faUserGroup, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/min-logo'

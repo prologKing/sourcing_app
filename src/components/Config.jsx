@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+
+
 const DoLogin = (formItems) => verifyOTP(formItems)
          
 const verifyOTP = (formItems) => {
@@ -18,8 +21,11 @@ const LoadBuyerSection = () => {
 } 
 
 const Logout = () => {
+    const navigate = useNavigate();
     sessionStorage.removeItem("kotage_user");
-    window.location.replace("/");
+    setUser(null);
+    navigate("/sourcing_app/#/login", { replace: true });
+    window.location.reload(true);
 };
 
 const SessionTimeout = () => {
