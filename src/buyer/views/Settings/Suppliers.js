@@ -137,7 +137,7 @@ const Suppliers = () => {
           <CRow>
           <CCol xs={5}>
             <CInputGroup>
-              <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
+              <CInputGroupText className='text-muted bg-light border-right-0'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
               <CFormInput type="text" placeholder="search by name or industry" required />
             </CInputGroup>
             </CCol>

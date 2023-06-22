@@ -146,10 +146,10 @@ const License = () => {
       <CCol xs={12}>
         <div className="mb-4 mr-2">
           <br />
-          <h6>Packages</h6>
           <CButtonGroup role="group" className="float-end" aria-label="Basic mixed styles example">
             <CButton style={{ backgroundColor: 'black' }} onClick={() => controlUserForm(false)}> <FontAwesomeIcon icon={faPlus} customClassName="nav-icon" /> Add </CButton>
           </CButtonGroup>
+          <h6>Packages</h6>
           <p>Understand what licensing has been purchased for your organization.</p>
           <br />
           <CSmartTable

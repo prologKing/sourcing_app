@@ -167,7 +167,7 @@ const getSelected =(data) =>{
               </CButtonGroup>
             <CCol xs={4} className="mb-5 mr-2">
             <CInputGroup>
-            <CInputGroupText className='bg-light'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
+            <CInputGroupText className='text-muted bg-light border-right-0'><FontAwesomeIcon icon={faSearch} customClassName="nav-icon" /></CInputGroupText>
             <CFormInput type="text" id="validationServer03" placeholder="search by name and email"  />
             </CInputGroup>
             </CCol>
