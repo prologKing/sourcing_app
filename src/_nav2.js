@@ -29,12 +29,6 @@ const _nav2 = [
     to: '/invoices',
     icon: <FontAwesomeIcon icon={faSackDollar} size="lg" customClassName="nav-icon" />,
   },
-  {
-    component: CNavItem,
-    name: 'Sign Out',
-    to: '/login',
-    icon: <FontAwesomeIcon icon={faSignOut} size="lg" customClassName="nav-icon" />,
-  },
   // {
   //   component: CNavGroup,
   //   name: 'Base',
